@@ -1,2 +1,2 @@
 #!/bin/bash
-[ "$(ls -l hello | awk '{print $3}')" = "guillaume" -a chown vincent hello ]
+if [ "$(stat -c '%U' hello)" = "guillaume" ]; then chown vincent hello; fi

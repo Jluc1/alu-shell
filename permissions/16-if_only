@@ -1,2 +1,2 @@
 #!/bin/bash
-[ $(stat -c "%U" hello) = "guillaume" ] [ chown vincent hello ]
+[ "$(ls -l hello | awk '{print $3}')" = "guillaume" -a chown vincent hello ]

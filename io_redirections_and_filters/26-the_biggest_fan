@@ -1,2 +1,5 @@
 #!/bin/bash
+# Read the log file line by line and extract the first field (host or IP) using cut
+# Sort the output and count the occurrences of each host or IP using sort and uniq
+# Sort the output numerically in reverse order and print the first 11 lines using sort and head
 cut -f1 logfile.tsv | sort | uniq -c | sort -nr | head -n 11

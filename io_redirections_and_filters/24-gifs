@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -printf "%f\n" | sed 's/\.gif$//' | sort -fn
+find . -type f -name "*.gif" | sort -f | xargs -n 1 basename | tr -d '.gif'

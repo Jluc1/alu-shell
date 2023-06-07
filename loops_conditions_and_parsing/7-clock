@@ -1,27 +1,30 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
 
-for (( i=0; i<10; i++ ))
+#nested loop stuff
+
+
+hours=0
+
+minutes=1
+
+while [ $hours -ne 13 ]
+
 do
-  echo "Best School"
-done
-root@60ed4ab3482b:/alu-shell/loops_conditions_and_parsing# cat 7-clock 
-#!/usr/bin/env bash
-#displays the time for 12 hours and 59 minutes:
 
-#display hours from 0 to 12
-#display minutes from 1 to 59
+    echo "Hour: $hours"
 
-hour=0
+    ((hours++))
 
-while [ $hour -le 12 ]
-do 
-  echo "Hour: $hour"
-  minute=1
-  while [ $minute -le 59 ]
-  do 
-    echo "$minute"
-    (( minute++ ))
-  done
-  (( hour++ ))
+    while [ $minutes -ne 60 ]
+
+    do
+
+        echo $minutes
+
+        ((minutes++))
+
+    done
+
+    ((minutes = 1))
+
 done

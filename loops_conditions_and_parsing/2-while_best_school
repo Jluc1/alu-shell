@@ -5,14 +5,3 @@ for (( i=0; i<10; i++ ))
 do
   echo "Best School"
 done
-root@60ed4ab3482b:/alu-shell/loops_conditions_and_parsing# cat 2-while_best_school
-#!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
-
-count=0
-
-while [ $count -lt 10 ]
-do
-  echo "Best School"
-  (( count++ ))
-done
